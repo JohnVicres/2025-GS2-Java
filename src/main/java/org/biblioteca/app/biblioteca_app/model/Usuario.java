@@ -1,4 +1,4 @@
-package main.java.org.biblioteca.app.biblioteca_app.model;
+package org.biblioteca.app.biblioteca_app.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

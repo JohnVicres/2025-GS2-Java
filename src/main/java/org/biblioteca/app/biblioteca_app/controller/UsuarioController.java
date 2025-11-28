@@ -1,7 +1,7 @@
-package main.java.org.biblioteca.app.biblioteca_app.controller;
+package org.biblioteca.app.biblioteca_app.controller;
 
-import main.java.org.biblioteca.app.biblioteca_app.model.Usuario;
-import main.java.org.biblioteca.app.biblioteca_app.repository.UsuarioRepository;
+import org.biblioteca.app.biblioteca_app.model.Usuario;
+import org.biblioteca.app.biblioteca_app.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

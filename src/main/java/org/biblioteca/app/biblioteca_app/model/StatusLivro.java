@@ -1,4 +1,4 @@
-package main.java.org.biblioteca.app.biblioteca_app.model;
+package org.biblioteca.app.biblioteca_app.model;
 
 public enum StatusLivro {
     DISPONIVEL,

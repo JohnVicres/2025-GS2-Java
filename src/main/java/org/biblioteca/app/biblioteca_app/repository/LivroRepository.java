@@ -1,7 +1,7 @@
-package main.java.org.biblioteca.app.biblioteca_app.repository;
+package org.biblioteca.app.biblioteca_app.repository;
 
-import main.java.org.biblioteca.app.biblioteca_app.model.Livro;
-import main.java.org.biblioteca.app.biblioteca_app.model.StatusLivro;
+import org.biblioteca.app.biblioteca_app.model.Livro;
+import org.biblioteca.app.biblioteca_app.model.StatusLivro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
