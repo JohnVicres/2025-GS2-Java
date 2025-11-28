@@ -53,4 +53,14 @@ public class LivroController {
         livroRepository.save(livro);
         return "redirect:/livros";
     }
+
+    // @DeleteMapping("/remover")
+    // public String deletar(@Valid @ModelAttribute("livro") Livro livro,
+    // BindingResult result) {
+    // if (result.hasErrors()) {
+    // return "livros/remove";
+    // }
+    // livroRepository.delete(livro);
+    // return "redirect:/livros";
+    // }
 }
