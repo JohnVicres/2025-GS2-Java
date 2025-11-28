@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Livro</title>
+</head>
+<body>
+
+<h1>Novo Livro</h1>
+
+<form th:action="@{/livros}" th:object="${livro}" method="post">
+
+    <div>
+        <label>Título:</label><br/>
+        <input type="text" th:field="*{titulo}" />
+        <div th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <div>
+        <label>Autor:</label><br/>
+        <input type="text" th:field="*{autor}" />
+        <div th:if="${#fields.hasErrors('autor')}" th:errors="*{autor}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <div>
+        <label>Ano de Publicação:</label><br/>
+        <input type="text" th:field="*{anopub}" />
+        <div th:if="${#fields.hasErrors('anopub')}" th:errors="*{anopub}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <div>
+        <label>Status:</label><br/>
+        <input type="text" th:field="*{status}" />
+        <div th:if="${#fields.hasErrors('status')}" th:errors="*{status}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <button type="submit">Salvar</button>
+</form>
+
+<br/>
+
+<a th:href="@{/livros}">Voltar para a lista principal</a>
+
+</body>
+</html>

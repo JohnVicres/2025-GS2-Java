@@ -1,10 +1,14 @@
 package org.biblioteca.app.biblioteca_app.controller;
 
+import org.biblioteca.app.biblioteca_app.model.Livro;
 import org.biblioteca.app.biblioteca_app.model.StatusLivro;
+import org.biblioteca.app.biblioteca_app.model.Usuario;
 import org.biblioteca.app.biblioteca_app.repository.LivroRepository;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -32,5 +36,21 @@ public class LivroController {
     public String listarEmprestimo(Model model) {
         model.addAttribute("livros", livroRepository.findByStatus(StatusLivro.EMPRESTADO));
         return "livros/listaemprestados";
+    }
+
+    @GetMapping("/novo")
+    public String novoForm(Model model) {
+        model.addAttribute("livro", new Livro());
+        return "livros/form";
+    }
+
+    @PostMapping
+    public String salvar(@Valid @ModelAttribute("livro") Livro livro,
+            BindingResult result) {
+        if (result.hasErrors()) {
+            return "livros/form";
+        }
+        livroRepository.save(livro);
+        return "redirect:/livros";
     }
 }
