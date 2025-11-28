@@ -1,0 +1,68 @@
+Desenvolver uma aplicação web simples para gerenciar livros e empréstimos de uma biblioteca comunitária, utilizando Spring Boot, MVC, JPA e Thymeleaf.
+
+✅ Requisitos Funcionais
+1. Cadastro de Livros
+Cada livro deve ter: título, autor, ano de publicação e status (disponível ou emprestado).
+
+Deve ser possível inserir, editar e excluir livros.
+
+Ao cadastrar, o livro começa com status disponível.
+
+2. Cadastro de Usuários
+Cada usuário deve ter: nome e e-mail.
+
+Deve ser possível inserir e listar usuários.
+
+3. Registro de Empréstimos
+Um empréstimo deve estar vinculado a:
+
+Um livro (que deve passar para status “emprestado”).
+
+Um usuário (quem pegou o livro).
+
+Data de retirada.
+
+Data prevista para devolução.
+
+Ao devolver o livro, o status deve voltar para disponível.
+
+4. Listagem
+Listar todos os livros cadastrados.
+
+Listar apenas livros disponíveis.
+
+Listar os empréstimos ativos (quem pegou, qual livro e até quando).
+
+
+🔧 Requisitos Técnicos
+Spring Boot Starter com dependências: Web, JPA, Thymeleaf, H2 (ou MySQL, se preferirem).
+
+Entidades:
+
+Livro
+
+Usuario
+
+Emprestimo (relaciona livro e usuário).
+
+Camadas do projeto:
+
+model → classes das entidades.
+
+repository → interfaces que estendem JpaRepository.
+
+controller → controladores para livros, usuários e empréstimos.
+
+templates → páginas Thymeleaf para cadastro, listagem e formulários.
+
+Validações:
+
+Livro não pode ter título vazio.
+
+Usuário deve ter e-mail válido.
+
+Data de devolução deve ser posterior à data de retirada. 
+
+
+
+Criar um repositório no github para a entrega.

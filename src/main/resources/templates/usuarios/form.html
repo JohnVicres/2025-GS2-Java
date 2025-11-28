@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+
+<h1>Novo Usuário</h1>
+
+<form th:action="@{/usuarios}" th:object="${usuario}" method="post">
+
+    <div>
+        <label>Nome:</label><br/>
+        <input type="text" th:field="*{nome}" />
+        <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <div>
+        <label>E-mail:</label><br/>
+        <input type="email" th:field="*{email}" />
+        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:red"></div>
+    </div>
+
+    <br/>
+
+    <button type="submit">Salvar</button>
+</form>
+
+<br/>
+
+<a th:href="@{/usuarios}">Voltar para a lista</a>
+
+</body>
+</html>
