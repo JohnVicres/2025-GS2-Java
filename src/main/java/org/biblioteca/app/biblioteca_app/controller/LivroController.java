@@ -1,15 +1,10 @@
 package org.biblioteca.app.biblioteca_app.controller;
 
-import org.biblioteca.app.biblioteca_app.model.Livro;
 import org.biblioteca.app.biblioteca_app.model.StatusLivro;
-import org.biblioteca.app.biblioteca_app.model.Usuario;
 import org.biblioteca.app.biblioteca_app.repository.LivroRepository;
-import org.biblioteca.app.biblioteca_app.repository.UsuarioRepository;
 
-import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
